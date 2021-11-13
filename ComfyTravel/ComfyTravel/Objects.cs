@@ -22,4 +22,13 @@ namespace ComfyTravel
         [BsonElement("coord")]
         public Tuple<double, double> Coordinates { get; set; }
     }
+
+    public static class TypesOfObjects
+    {
+        public static readonly string Park = "Парк";
+        public static readonly string Boulevard = "Бульвар";
+        public static readonly string Museum = "Музей";
+        public static readonly string Monument = "Памятник";
+        public static readonly string Cinema = "Кино";
+    }
 }
