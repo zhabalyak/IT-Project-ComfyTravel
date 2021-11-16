@@ -28,10 +28,17 @@ namespace ComfyTravel
 
     public static class TypesOfObjects
     {
-        public static readonly string Park = "Парк";
-        public static readonly string Boulevard = "Бульвар";
-        public static readonly string Museum = "Музей";
-        public static readonly string Monument = "Памятник";
-        public static readonly string Cinema = "Кино";
+        public const string Park = "Парк";
+        public const string Boulevard = "Бульвар";
+        public const string Museum = "Музей";
+        public const string Monument = "Памятник";
+        public const string Cinema = "Кино";
+    }
+
+    public static class TypesOfTransport
+    {
+        public const string Walk = "w";
+        public const string Car = "c";
+        public const string Public = "p";
     }
 }

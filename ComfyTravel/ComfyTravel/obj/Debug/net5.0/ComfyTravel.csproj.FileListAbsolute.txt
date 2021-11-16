@@ -44,4 +44,3 @@ C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\o
 C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\obj\Debug\net5.0\ComfyTravel.pdb
 C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\obj\Debug\net5.0\ComfyTravel.genruntimeconfig.cache
 C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\obj\Debug\net5.0\Razor\Views\Main\Index.cshtml.g.cs
-C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\obj\Debug\net5.0\Razor\Views\Main\ShowObjects.cshtml.g.cs

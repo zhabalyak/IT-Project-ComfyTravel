@@ -29,7 +29,17 @@ namespace ComfyTravel.Controllers
         {
             //тестовая проверочка работы с бд
             //плюс передача данных с контроллера во вьюшку (там ображение к @ViewData["Testing"])
-            ViewData["Testing"] = _objectsCollection.Find(s => s.Type == TypesOfObjects.Park).ToList().Count;
+            //ViewData["Testing"] = _objectsCollection.Find(s => s.Type == TypesOfObjects.Park).ToList().Count;
+            //ViewData["Testing"] = _objectsCollection.Find(s => s.Type != "none").ToList().Count;
+
+            List<Objects> AllPlaces = _objectsCollection.Find(s => s.Type != "none").ToList();
+
+            ViewData["Testing"] = RouteGenerationModule.MainGenerate(
+                AllPlaces, new List<Objects>() { AllPlaces[15]},
+                new List<bool>() { true, true, false, false, false }, false,
+                new DateTime(DateTime.Now.Year, DateTime.Now.Month, 27, 12, 45, 0), 
+                new TimeSpan(10, 5, 0), 
+                TypesOfTransport.Public);
 
             return View();
         }
