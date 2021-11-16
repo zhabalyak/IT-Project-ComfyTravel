@@ -7,7 +7,7 @@ body {
 header {
     background-color: #9fc3f9;
     opacity: 0.85;
-    height:100px;
+    height: 100px;
     width: 100%;
 }
 
@@ -18,7 +18,6 @@ h1.h1 {
     text-align: center;
     color: #27b8f7;
     text-decoration: none;
-
 }
 
 
@@ -32,7 +31,7 @@ a.a1 {
 }
 
 
-nav.n1{
+nav.n1 {
     display: inline-grid;
     background-color: #c2e3f7;
     opacity: 0.7;
@@ -40,10 +39,11 @@ nav.n1{
     grid-template-rows: 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+    width: 100%;
 }
 
 
-ul.ul1{
+ul.ul1 {
     grid-column-start: 5;
     grid-column-end: 6;
     grid-row-start: 1;
@@ -60,10 +60,8 @@ li.li1 {
 
 
 button.btn1 {
-    padding: 1em;
-    margin: 1em;
-    width: 100px;
-    height: 10px;
+    width: 450px;
+    height: 30px;
     -webkit-box-shadow: 0px 7px 16px -3px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 7px 16px -3px rgba(0,0,0,0.5);
     box-shadow: 0px 7px 16px -3px rgba(0,0,0,0.5);
@@ -75,7 +73,12 @@ button.btn1 {
     background: linear-gradient(top, #3383ca 0%, #000080 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbf00', endColorstr='#fa9f17', GradientType=0 );
     border: 0;
-    border-radius: 30px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 17pt;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
 }
 
 
@@ -138,7 +141,7 @@ p.p2 {
 }
 
 
-div.login {
+div.login_form {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -159,11 +162,36 @@ input.input {
     text-shadow: 1px 1px 1px #24035c;
     background: #0055;
     background: -moz-linear-gradient(top, #3383ca 0%, #000080 100%);
-    background: -webkit-linear-gradient(top, #3383ca 0%, #000080  100%);
+    background: -webkit-linear-gradient(top, #3383ca 0%, #000080 100%);
     background: -o-linear-gradient(top, #3383ca 0%, #000080 100%);
     background: -ms-linear-gradient(top, #3383ca 0%, #000080 100%);
-    background: linear-gradient(to bottom, #3383ca 0%, #000080  100%);
+    background: linear-gradient(to bottom, #3383ca 0%, #000080 100%);
     cursor: auto;
+}
+
+
+button.submit_map {
+    alignment: center;
+    padding: 1em;
+    margin: 1em;
+    width: 50%;
+    -webkit-box-shadow: 0px 7px 16px -3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 7px 16px -3px rgba(0,0,0,0.5);
+    box-shadow: 0px 7px 16px -3px rgba(0,0,0,0.5);
+    background: #0055;
+    background: -moz-linear-gradient(top, #0055 0%, #004c8e 100%);
+    background: -webkit-linear-gradient(top, #0055 0%, #004c8e 100%);
+    background: -o-linear-gradient(top, #0055 0%, #004c8e 100%);
+    background: -ms-linear-gradient(top, #0055 0%, #004c8e 100%);
+    background: linear-gradient(to bottom, #0055 0%, #004c8e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbf00', endColorstr='#fa9f17', GradientType=0 );
+    border: 0;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    text-shadow: -1px -1px #24035c, 0 1px 0 white;
 }
 
 
@@ -189,4 +217,49 @@ input.submit {
     font-size: 1em;
     font-weight: 700;
     text-shadow: -1px -1px #24035c, 0 1px 0 white;
+}
+
+
+label.label {
+    font-size: 15pt;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+p.p3 {
+    text-align: center;
+    font-size: 15pt;
+    color: white;
+    font-weight: bold;
+}
+
+
+button.hide {
+    alignment: center;
+    padding: 1em;
+    margin: 1em;
+    width: 50%;
+    -webkit-box-shadow: 0px 7px 16px -3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 7px 16px -3px rgba(0,0,0,0.5);
+    box-shadow: 0px 7px 16px -3px rgba(0,0,0,0.5);
+    background: #0055;
+    background: -moz-linear-gradient(top, #004c8e 0%, #9fc3f9 100%);
+    background: -webkit-linear-gradient(top, #004c8e 0%, #9fc3f9 100%);
+    background: -o-linear-gradient(top, #004c8e 0%, #9fc3f9 100%);
+    background: -ms-linear-gradient(top, #004c8e 0%, #9fc3f9 100%);
+    background: linear-gradient(to bottom, #004c8e 0%, #9fc3f9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbf00', endColorstr='#fa9f17', GradientType=0 );
+    border: 0;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    text-shadow: -1px -1px #24035c, 0 1px 0 white;
+}
+
+
+.hidden {
+    display: none;
 }
