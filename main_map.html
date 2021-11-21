@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6c671181-c03d-4a64-9f0d-94dee1608f30" type="text/javascript"></script>
+    <script src="../map.js" type="text/javascript"></script>
+    <script src="../show_map.js" type="text/javascript"></script>
+    <script src="../show_form.js" type="text/javascript"></script>
+    <script src="../hide_form.js" type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/main_map.css">
+    <title>ComfyTravel main map</title>
+</head>
+
+<body>
+
+<header>
+    <h1 class="h1">
+        <a class="a1">
+            ComfyTravel
+        </a>
+    </h1>
+</header>
+
+<nav class="n1">
+    <ul class="ul1">
+        <li class="li1">
+            <button class="btn1"> Войти или зарегистрироваться </button>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="main">
+    <div class="choice">
+        <form class="choice">
+            <p class="p1">Выберите, что показать на карте</p>
+            <p class="p2"><input type="checkbox" name="park" value="Парки"> Парки</p>
+            <p class="p2"><input type="checkbox" name="boulevard" value="Бульвары"> Бульвары</p>
+            <p class="p2"><input type="checkbox" name="museum" value="Музеи"> Музеи</p>
+            <p class="p2"><input type="checkbox" name="monument" value="Памятники"> Памятники</p>
+            <p class="p2"><input type="checkbox" name="cinema" value="Кино"> Кино</p>
+            <p class="p2"><input type="checkbox" name="all" value="Всё"> Всё</p>
+            <p class="p2"><input type="checkbox" name="children" value="Дети"> Можно с детьми</p>
+            <button class="submit_map" id="btn_show_map"> Показать объекты </button>
+        </form>
+    </div>
+    <div class="login_form hidden">
+        <form class="choice" action="">
+            <p class="p1">Введите логин и пароль</p>
+            <label class="label">
+                Логин :
+                <input class="input" type="text" name="login">
+            </label>
+            <label class="label">
+                Пароль:
+                <input class="input" type="text" name="password">
+            </label>
+            <input class="submit" type="submit" value="Войти / Зарегистрироваться">
+            <button class="hide"> Скрыть </button>
+        </form>
+    </div>
+    <div id="map"></div>
+</div>
+
+<footer>
+    <p class="p3">ComfyTravel - Copyright © 2021</p>
+    <p class="p3">С вопросами обращаться на почту: comf_travel_kzn@gmail.com</p>
+</footer>
+
+</body>
+</html>
