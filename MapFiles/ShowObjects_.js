@@ -4,28 +4,31 @@ ymaps.ready(function ()
             center: [55.806059, 49.177079],
             zoom: 11,
             controls: ['zoomControl']
-        }),
+        });
 
-        button_show = document.getElementById("btn_show");
+    // для тестового запуска
+    // get_points_test();
+    // function get_points_test () {
+    //     var points = [[[55.806059, 49.177076], [55.811681, 49.100693]],
+    //                     ["точка 1", "точка 2"]]
+    //     show_points_on_map(points);
+    // } 
 
+    function take_points (points_pack) 
+    {
+        show_points_on_map(points_pack);
+    } 
 
-    button_show.addEventListener("click", function(e) {
-        points_pack = get_points()
+    function show_points_on_map (points_pack) 
+    {
         points = points_pack[0]
         points_names = points_pack[1]
 
-        // for (point of points)
         for (i = 0; i < points.length; i++)
         {
             myPlacemark = new ymaps.Placemark(points[i], {hintContent: points_names[i]});
             myMap.geoObjects.add(myPlacemark);
-        }   
-    });
-
-    function get_points (e) {
-        var points = [[[55.806059, 49.177076], [55.811681, 49.100693]],
-                        ["точка 1", "точка 2"]]
-        return points;
+        }
     }  
-
+      
 });
