@@ -1,0 +1,41 @@
+function enable() {
+    document.getElementById('save').disabled = false;
+    document.getElementById('login').disabled = false;
+    document.getElementById('password').disabled = false;
+    document.getElementById('name').disabled = false;
+    document.getElementById('surname').disabled = false;
+    document.getElementById('date').disabled = false;
+    document.getElementById('car').disabled = false;
+    document.getElementById('foot').disabled = false;
+    document.getElementById('hours').disabled = false;
+    document.getElementById('minutes').disabled = false;
+    document.getElementById('park').disabled = false;
+    document.getElementById('blvrd').disabled = false;
+    document.getElementById('museum').disabled = false;
+    document.getElementById('monument').disabled = false;
+    document.getElementById('cinema').disabled = false;
+    document.getElementById('all').disabled = false;
+    document.getElementById('child').disabled = false;
+    document.getElementById('edit').disabled = true;
+}
+
+function disable() {
+    document.getElementById('save').disabled = true;
+    document.getElementById('login').disabled = true;
+    document.getElementById('password').disabled = true;
+    document.getElementById('name').disabled = true;
+    document.getElementById('surname').disabled = true;
+    document.getElementById('date').disabled = true;
+    document.getElementById('car').disabled = true;
+    document.getElementById('foot').disabled = true;
+    document.getElementById('hours').disabled = true;
+    document.getElementById('minutes').disabled = true;
+    document.getElementById('park').disabled = true;
+    document.getElementById('blvrd').disabled = true;
+    document.getElementById('museum').disabled = true;
+    document.getElementById('monument').disabled = true;
+    document.getElementById('cinema').disabled = true;
+    document.getElementById('all').disabled = true;
+    document.getElementById('child').disabled = true;
+    document.getElementById('edit').disabled = false;
+}
