@@ -44,3 +44,14 @@ C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\o
 C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\obj\Debug\net5.0\ComfyTravel.pdb
 C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\obj\Debug\net5.0\ComfyTravel.genruntimeconfig.cache
 C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\obj\Debug\net5.0\Razor\Views\Main\Index.cshtml.g.cs
+C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\bin\Debug\net5.0\System.Web.Mvc.dll
+C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\bin\Debug\net5.0\System.Web.Razor.dll
+C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\bin\Debug\net5.0\System.Web.Helpers.dll
+C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
+C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
+C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\bin\Debug\net5.0\System.Web.WebPages.dll
+C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
+C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\bin\Debug\net5.0\App.Config
+C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\bin\Debug\net5.0\web.config
+C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\bin\Debug\net5.0\ComfyTravel.dll.config
+C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\obj\Debug\net5.0\Razor\Views\Main\Start.cshtml.g.cs

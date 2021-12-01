@@ -208,16 +208,16 @@ namespace ComfyTravel.Models
             List<Placement> res = newres.Item1;
             string output = "";
 
-            output += "\nОбязательные места:";
-            for (int i = 0; i < MustHavePlaces.Count(); i++)
-            {
-                output += MustHavePlaces[i].name + ' ';
-            }
-            output += "\nПриоритет мест такой:";
-            for (int i = 0; i < AllPlaces.Count(); i++)
-            {
-                output += AllPlaces[i].types + ' ';
-            }
+            //output += "\nОбязательные места:";
+            //for (int i = 0; i < MustHavePlaces.Count(); i++)
+            //{
+            //    output += MustHavePlaces[i].name + ' ';
+            //}
+            //output += "\nПриоритет мест такой:";
+            //for (int i = 0; i < AllPlaces.Count(); i++)
+            //{
+            //    output += AllPlaces[i].types + ' ';
+            //}
 
             output += "\nПримерный маршрут такой:";
             for (int i = 0; i < res.Count(); i++)
