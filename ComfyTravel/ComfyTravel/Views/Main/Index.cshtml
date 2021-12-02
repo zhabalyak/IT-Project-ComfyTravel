@@ -5,10 +5,6 @@
 <head>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6c671181-c03d-4a64-9f0d-94dee1608f30" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    @*<script src="../js/map.js" type="text/javascript"></script>*@
-    <script src="../js/show_map.js" type="text/javascript"></script>
-    @*<script src="../js/show_form.js" type="text/javascript"></script>
-        <script src="../js/hide_form.js" type="text/javascript"></script>*@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/main_map.css">
     <title>ComfyTravel main map</title>
@@ -30,7 +26,7 @@
         </ul>
     </nav>
 
-    <div>
+    <div class="route">
         <p class="p3" id="points_x" hidden value=@ViewData["Points_x"]>@ViewData["Points_x"]</p>
         <p class="p3" id="points_y" hidden value=@ViewData["Points_y"]>@ViewData["Points_y"]</p>
         <p class="p3" id="points_names" hidden value=@ViewData["Points_names"]>@ViewData["Points_names"]</p>

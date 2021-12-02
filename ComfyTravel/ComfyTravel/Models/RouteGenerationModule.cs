@@ -219,7 +219,7 @@ namespace ComfyTravel.Models
 
             string points_x = String.Join(", ", res.Select(x => x.x).ToList());
             string points_y = String.Join(", ", res.Select(x => x.y).ToList());
-            string point_names = String.Join(" -> ", res.Select(x => x.name).ToList());
+            string point_names = String.Join("🠖", res.Select(x => x.name).ToList());
 
             //output += "\nПримерный маршрут такой:";
             //for (int i = 0; i < res.Count(); i++)

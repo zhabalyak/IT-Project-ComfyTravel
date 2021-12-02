@@ -105,6 +105,11 @@ li.li1 {
 }
 
 
+div.route{
+    background-color: #0f3457;
+    opacity: 0.9;
+}
+
 div.main {
     display: grid;
     grid-template-columns: 1fr 2fr;
