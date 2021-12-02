@@ -30,24 +30,19 @@ namespace ComfyTravel.Controllers
 
         public IActionResult Index(int? id)
         {
-            //тестовая проверочка работы с бд
-            //плюс передача данных с контроллера во вьюшку (там ображение к @ViewData["Testing"])
-            //ViewData["Testing"] = _objectsCollection.Find(s => s.Type == TypesOfObjects.Park).ToList().Count;
-            //ViewData["Testing"] = _objectsCollection.Find(s => s.Type != "none").ToList().Count;
+            //тестовая генерация маршрута на искусственных переменных
+            List<Objects> AllPlaces = _objectsCollection.Find(s => s.Type != "none").ToList();
 
-            //List<Objects> AllPlaces = _objectsCollection.Find(s => s.Type != "none").ToList();
+            List<string> route = RouteGenerationModule.MainGenerate(
+                AllPlaces, new List<Objects>() { AllPlaces[15] },
+                new List<bool>() { false, true, false, true, false }, true,
+                new DateTime(DateTime.Now.Year, DateTime.Now.Month, 27, 12, 45, 0),
+                new TimeSpan(5, 5, 0),
+                TypesOfTransport.Public);
 
-            //ViewData["Params"] = RouteGenerationModule.MainGenerate(
-            //    AllPlaces, new List<Objects>() { AllPlaces[15]},
-            //    new List<bool>() { false, true, false, true, false }, true,
-            //    new DateTime(DateTime.Now.Year, DateTime.Now.Month, 27, 12, 45, 0), 
-            //    new TimeSpan(5, 5, 0), 
-            //    TypesOfTransport.Public);
-
-
-            //if (!Request.Url.AbsoluteUri.EndsWith("Main/Index"))
-            //{
-            //    return RedirectToAction("Main", "Index");
+            ViewData["Points_x"] = route[0];
+            ViewData["Points_y"] = route[1];
+            ViewData["Points_names"] = route[2];
 
             return View("Index");
         }
@@ -80,20 +75,9 @@ namespace ComfyTravel.Controllers
             if (checkedParams.children == "Дети")
                 AllPlaces.RemoveAll(s => !s.Kids);
 
-            var points = AllPlaces.Select(x => new { x.Name, x.Coordinates.Item1, x.Coordinates.Item2 }).ToList();
-
-            //ViewData["Params"] = String.Join(" ", AllPlaces.Select(s => s.Type).ToArray());
-
-            var json = JsonSerializer.Serialize(points);
-
-            ViewData["Params"] = json.ToString();
-
-            ViewData["Points_x"] = String.Join(", ", AllPlaces.Select(x => (double)x.Coordinates.Item1).ToList());
+            ViewData["Points_x"] = String.Join(", ", AllPlaces.Select(x => x.Coordinates.Item1).ToList());
             ViewData["Points_y"] = String.Join(", ", AllPlaces.Select(x => x.Coordinates.Item2).ToList());
             ViewData["Points_names"] = String.Join(", ", AllPlaces.Select(x => x.Name).ToList());
-
-            ViewBag.JavaScriptFunction = string.Format("ShowGreetings('{0}');", json);
-            //ViewBag.JavaScriptFunction = "take_points([[[55.806059, 49.177076], [55.811681, 49.100693]], [\"точка 1\", \"точка 2\"]]);";
 
             return View("Index");
 

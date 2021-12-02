@@ -55,3 +55,4 @@ C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\b
 C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\bin\Debug\net5.0\web.config
 C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\bin\Debug\net5.0\ComfyTravel.dll.config
 C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\obj\Debug\net5.0\Razor\Views\Main\Start.cshtml.g.cs
+C:\Users\zhaba\Documents\GitHub\IT-Project-ComfyTravel\ComfyTravel\ComfyTravel\obj\Debug\net5.0\Razor\Views\Client\Index.cshtml.g.cs

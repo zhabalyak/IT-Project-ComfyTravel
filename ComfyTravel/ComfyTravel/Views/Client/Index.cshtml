@@ -4,14 +4,11 @@
 
 <head>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6c671181-c03d-4a64-9f0d-94dee1608f30" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    @*<script src="../js/map.js" type="text/javascript"></script>*@
-    <script src="../js/show_map.js" type="text/javascript"></script>
-    @*<script src="../js/show_form.js" type="text/javascript"></script>
-        <script src="../js/hide_form.js" type="text/javascript"></script>*@
+    <script src="../js/WalkingRoute.js" type="text/javascript"></script>
+    <script src=""></script>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../css/main_map.css">
-    <title>ComfyTravel main map</title>
+    <link rel="stylesheet" type="text/css" href="../css/main_client.css">
+    <title>ComfyTravel client page</title>
 </head>
 
 <body>
@@ -26,19 +23,25 @@
 
     <nav class="n1">
         <ul class="ul1">
-            <li class="li1"> Путешествия ждут! </li>
+            <li class="li1">
+                <button id="btn1"> Личные данные </button>
+            </li>
+            <li class="li1">
+                <button id="btn3"> Выйти </button>
+            </li>
         </ul>
     </nav>
 
     <div>
         <p class="p3" id="points_x" hidden value=@ViewData["Points_x"]>@ViewData["Points_x"]</p>
         <p class="p3" id="points_y" hidden value=@ViewData["Points_y"]>@ViewData["Points_y"]</p>
-        <p class="p3" id="points_names" hidden value=@ViewData["Points_names"]>@ViewData["Points_names"]</p>
+        <p class="p3" id="points_names"  value=@ViewData["Points_names"]>@ViewData["Points_names"]</p>
+        <p class="p3" id="mode" hidden  value=@ViewData["Mode"]>@ViewData["Mode"]</p>
     </div>
 
     <div class="main">
         <div class="choice">
-            <form class="choice" method="get" action="GetParams">
+            <form class="choice" method="get" action="GetRoute">
                 <p class="p1">Выберите, что показать на карте</p>
                 <p class="p2"><input type="checkbox" name="park" value="Парки"> Парки</p>
                 <p class="p2"><input type="checkbox" name="boulevard" value="Бульвары"> Бульвары</p>
@@ -47,23 +50,18 @@
                 <p class="p2"><input type="checkbox" name="cinema" value="Кино"> Кино</p>
                 <p class="p2"><input type="checkbox" name="all" value="Всё"> Всё</p>
                 <p class="p2"><input type="checkbox" name="children" value="Дети"> Можно с детьми</p>
-                <input class="submit" type="submit" value="Показать на карте">
+                <p class="p2">Введите время, которое вы хотите потратить на прогулку</p>
+                <p class="p2">
+                    <input type="number" name="hours" value="Часы" min="0" max="5"> ч
+                    <input type="number" name="minutes" value="Минуты" min="0" max="59"> мин
+                </p>
+                <p class="p2">
+                    <input type="radio" name="waytogo" value="На машине"> На машине
+                    <input type="radio" name="waytogo" value="Пешком"> Пешком
+                </p>
+                <input class="submit" type="submit" onclick="" value="Показать объекты">
+                <input class="submit" type="submit" onclick="" value="Сгенерировать маршрут">
             </form>
-        </div>
-        <div class="login_form">
-            <form class="choice">
-                <p class="p1">Введите логин и пароль</p>
-                @*<label class="label">
-                Логин :
-                <input class="input" type="text" name="login">
-            </label>
-            <label class="label">
-                Пароль:
-                <input class="input" type="text" name="password">
-            </label>*@
-                <input class="submit" href="@Url.Action("Index", "Client")" type="submit" value="Войти / Зарегистрироваться">
-            </form>
-            <a href="~/Client/Index">Click</a>
         </div>
         <div id="map"></div>
     </div>
