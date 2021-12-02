@@ -29,20 +29,6 @@ namespace ComfyTravel.Controllers
 
         public IActionResult Index(int? id)
         {
-            //тестовая генерация маршрута на искусственных переменных
-            //List<Objects> AllPlaces = _objectsCollection.Find(s => s.Type != "none").ToList();
-
-            //List<string> route = RouteGenerationModule.MainGenerate(
-            //    AllPlaces, new List<Objects>() { AllPlaces[15] },
-            //    new List<bool>() { false, true, false, true, false }, true,
-            //    new DateTime(DateTime.Now.Year, DateTime.Now.Month, 27, 12, 45, 0),
-            //    new TimeSpan(5, 5, 0),
-            //    TypesOfTransport.Car);
-
-            //ViewData["Points_x"] = route[0];
-            //ViewData["Points_y"] = route[1];
-            //ViewData["Points_names"] = route[2];
-
             return View("Index");
         }
 
@@ -111,8 +97,6 @@ namespace ComfyTravel.Controllers
             ViewData["Points_names"] = route[2];
 
             return View("Index");
-
-            //return ViewData["Params"].ToString();
         }
     }
 }

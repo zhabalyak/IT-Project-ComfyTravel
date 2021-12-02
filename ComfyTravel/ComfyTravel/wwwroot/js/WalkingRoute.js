@@ -10,16 +10,13 @@
     var points_pack_x = document.getElementById('points_x').textContent.split(", ");
     var points_pack_y = document.getElementById('points_y').textContent.split(", ");
     var points_names = document.getElementById('points_names').textContent.split(" -> ");
-    var route_mode = parseFloat(document.getElementById('mode').textContent);
+    var route_mode = document.getElementById('mode').textContent;
 
-    if (route_mode == NaN) {
-        console.log(route_mode);
+    if (route_mode.length == 0) {
+        console.log(route_mode.length);
     }
     else {
-        console.log(points_pack_x);
-        console.log(points_pack_y);
-        console.log(points_names);
-        console.log(route_mode);
+        route_mode = parseFloat(route_mode);
 
         let points_pack = [points_pack_x, points_pack_y];
 

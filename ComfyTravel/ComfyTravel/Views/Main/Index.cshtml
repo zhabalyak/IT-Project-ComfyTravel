@@ -5,6 +5,7 @@
 <head>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6c671181-c03d-4a64-9f0d-94dee1608f30" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/show_map.js" type="text/javascript"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/main_map.css">
     <title>ComfyTravel main map</title>
@@ -57,7 +58,7 @@
                 Пароль:
                 <input class="input" type="text" name="password">
             </label>*@
-                <input class="submit" href="@Url.Action("Index", "Client")" type="submit" value="Войти / Зарегистрироваться">
+                <input class="submit" href="~/Client/Index" type="submit" value="Войти / Зарегистрироваться">
             </form>
             <a href="~/Client/Index">Click</a>
         </div>

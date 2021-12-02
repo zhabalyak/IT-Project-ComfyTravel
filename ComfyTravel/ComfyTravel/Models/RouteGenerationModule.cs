@@ -97,7 +97,6 @@ namespace ComfyTravel.Models
                 TopPlaces.Clear();
             }
 
-            //List<String> allTypes = new List<String> { "p", "m", "b", "c", "s" };
             List<String> allTypes = new List<String> 
             { 
                 TypesOfObjects.Park,
@@ -117,7 +116,6 @@ namespace ComfyTravel.Models
             }
 
             //кумовство среди типов - парки, памятники, бульвары
-            //List<String> pbs = new List<String> { "p", "b", "s" };
             List<String> pbs = new List<String>
             {
                 TypesOfObjects.Park,
@@ -177,73 +175,14 @@ namespace ComfyTravel.Models
             AllPlaces = new List<Placement>(TopPlaces);
             TopPlaces.Clear();
 
-            //Console.WriteLine("\nОбязательные места:");
-            //for (int i = 0; i < MustHavePlaces.Count(); i++)
-            //{
-            //    Console.Write(MustHavePlaces[i].id.ToString() + ' ');
-            //}
-            //Console.WriteLine("\nПриоритет мест такой:");
-            //for (int i = 0; i < AllPlaces.Count(); i++)
-            //{
-            //    Console.Write(AllPlaces[i].id.ToString() + ' ');
-            //}
-            //Console.Write("\nиз них подходят полностью:\n");
-            //for (int i = 0; i < fits; i++)
-            //{
-            //    Console.Write(AllPlaces[i].id.ToString() + '(' + AllPlaces[i].timein.ToString() + "), ");
-            //}
-            //Console.WriteLine("\nМежду ними расстояние и время:");
-            //for (int i = 0; i < fits - 1; i++)
-            //{
-            //    for (j = i + 1; j < fits; j++)
-            //    {
-            //        Console.Write(AllPlaces[i].id.ToString() + " and " + AllPlaces[j].id.ToString() + " - " +
-            //            AllPlaces[i].DistanceTo(AllPlaces[j]).ToString() + "km, minutes:" + (60 * AllPlaces[i].TimeTo(AllPlaces[j], transport)).ToString() + '\n');
-            //    }
-            //}
-
             Tuple<List<Placement>, double> newres = RouteGeneration(MustHavePlaces, AllPlaces, transport, duration, fits);
             List<Placement> res = newres.Item1;
-            //string output = "";
-
-            //output += "\nОбязательные места:";
-            //for (int i = 0; i < MustHavePlaces.Count(); i++)
-            //{
-            //    output += MustHavePlaces[i].name + ' ';
-            //}
-            //output += "\nПриоритет мест такой:";
-            //for (int i = 0; i < AllPlaces.Count(); i++)
-            //{
-            //    output += AllPlaces[i].types + ' ';
-            //}
 
             string points_x = String.Join(", ", res.Select(x => x.x).ToList());
             string points_y = String.Join(", ", res.Select(x => x.y).ToList());
             string point_names = String.Join("🠖", res.Select(x => x.name).ToList());
 
-            //output += "\nПримерный маршрут такой:";
-            //for (int i = 0; i < res.Count(); i++)
-            //    output += res[i].name + '(' + res[i].timein.ToString() + "), ";
-            //output += "\nМежду ними расстояние и время:";
-            //for (int i = 0; i < res.Count() - 1; i++)
-            //    output += res[i].id.ToString() + " and " + res[i + 1].id.ToString() + " - " 
-            //        + res[i].DistanceTo(res[i + 1]).ToString() 
-            //        + "km, minutes:" + (60 * res[i].TimeTo(res[i + 1], transport)).ToString() 
-            //        + '\n';
-
-            //output += "Вы просили - " + duration.ToString() + ", мы сделали - " + newres.Item2.ToString();
-
-            //return output;
             return new List<string>() { points_x, points_y, point_names };
-
-            //Console.WriteLine("Примерный маршрут такой:");
-            //for (int i = 0; i < res.Count(); i++)
-            //    Console.Write(res[i].id.ToString() + '(' + res[i].timein.ToString() + "), ");
-            //Console.WriteLine("\nМежду ними расстояние и время:");
-            //for (int i = 0; i < res.Count() - 1; i++)
-            //    Console.Write(res[i].id.ToString() + " and " + res[i + 1].id.ToString() + " - " +
-            //            res[i].DistanceTo(res[i + 1]).ToString() + "km, minutes:" + (60 * res[i].TimeTo(res[i + 1], transport)).ToString() + '\n');
-            //Console.WriteLine("Вы просили - " + duration.ToString() + ", мы сделали - " + newres.Item2.ToString());
         }
 
         public static Tuple<List<Placement>, double> RouteGeneration(List<Placement> AllPlaces, List<Placement> OtherPlaces, String transport, TimeSpan duration, int fits)
@@ -256,14 +195,7 @@ namespace ComfyTravel.Models
                 newres = new Tuple<List<Placement>, double>(null, 0);
             if (AllPlaces.Count() == 1)
                 newres = new Tuple<List<Placement>, double>(AllPlaces, AllPlaces[0].timein);
-            /*while (newres.Item2 < askedTime - 0.5)
-            {
-                List<Placement> newAllPlaces = new List<Placement>(AllPlaces);
-                newAllPlaces.Add(OtherPlaces[l]);
-                newres = MinRoute(newAllPlaces, OtherPlaces, transport, duration);
-                l = l + 1;
-                newAllPlaces.Remove(OtherPlaces[l - 1]);
-            }*/
+
             bool t = true;
             List<Placement> newAllPlaces = new List<Placement>(AllPlaces);
             while (t)
