@@ -80,14 +80,20 @@ namespace ComfyTravel.Controllers
             if (checkedParams.children == "Дети")
                 AllPlaces.RemoveAll(s => !s.Kids);
 
-            var points = AllPlaces.Select(x => new { x.Name, x.Coordinates }).ToList();
+            var points = AllPlaces.Select(x => new { x.Name, x.Coordinates.Item1, x.Coordinates.Item2 }).ToList();
 
-            ViewData["Params"] = String.Join(" ", AllPlaces.Select(s => s.Type).ToArray());
+            //ViewData["Params"] = String.Join(" ", AllPlaces.Select(s => s.Type).ToArray());
 
             var json = JsonSerializer.Serialize(points);
 
-            //ViewBag.JavaScriptFunction = string.Format("ShowGreetings('{0}');", json);
-            ViewBag.JavaScriptFunction = "take_points([[[55.806059, 49.177076], [55.811681, 49.100693]], [\"точка 1\", \"точка 2\"]]);";
+            ViewData["Params"] = json.ToString();
+
+            ViewData["Points_x"] = String.Join(", ", AllPlaces.Select(x => (double)x.Coordinates.Item1).ToList());
+            ViewData["Points_y"] = String.Join(", ", AllPlaces.Select(x => x.Coordinates.Item2).ToList());
+            ViewData["Points_names"] = String.Join(", ", AllPlaces.Select(x => x.Name).ToList());
+
+            ViewBag.JavaScriptFunction = string.Format("ShowGreetings('{0}');", json);
+            //ViewBag.JavaScriptFunction = "take_points([[[55.806059, 49.177076], [55.811681, 49.100693]], [\"точка 1\", \"точка 2\"]]);";
 
             return View("Index");
 

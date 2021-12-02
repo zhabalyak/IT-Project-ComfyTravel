@@ -31,7 +31,10 @@
     </nav>
 
     <div>
-        <p class="p3">@ViewData["Params"]</p>
+        @*<p class="p3" id="ppp" value="ViewData[" Params"]">@ViewData["Params"]</p>*@
+        <p class="p3" id="points_x" value=@ViewData["Points_x"]>@ViewData["Points_x"]</p>
+        <p class="p3" id="points_y" value=@ViewData["Points_y"]>@ViewData["Points_y"]</p>
+        <p class="p3" id="points_names" value=@ViewData["Points_names"]>@ViewData["Points_names"]</p>
     </div>
 
     <div class="main">
@@ -73,27 +76,10 @@
 </body>
 </html>
 
-<script type="text/javascript">
-    function take_points(points_pack) {
-        alter(points_pack);
-        show_points_on_map(points_pack);
-    }
-
-    function show_points_on_map(points_pack) {
-        var myMap = new ymaps.Map('map', {
-            center: [55.806059, 49.177079],
-            zoom: 11,
-            controls: ['zoomControl']
-        });
-
-        points = points_pack[0]
-        points_names = points_pack[1]
-
-        for (i = 0; i < points.length; i++) {
-            myPlacemark = new ymaps.Placemark(points[i], { hintContent: points_names[i] });
-            myMap.geoObjects.add(myPlacemark);
-        }
-    }
+@*<script type="text/javascript">
+    function ShowGreetings(name) {
+        alert(name);
+    };
 </script>
 
 @if (ViewBag.JavaScriptFunction != null)
@@ -101,4 +87,4 @@
     <script type="text/javascript">
         @Html.Raw(ViewBag.JavaScriptFunction)
     </script>
-}
+}*@
