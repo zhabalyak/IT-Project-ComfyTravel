@@ -60,10 +60,6 @@
         if (mode == 2) {
             multiRoute.model.setParams({ routingMode: 'auto' })
         }
-        // if (mode == 3)
-        // {
-        //     multiRoute.model.setParams({routingMode: 'masstransit'})
-        // }
         myMap.geoObjects.add(multiRoute);
 
 
